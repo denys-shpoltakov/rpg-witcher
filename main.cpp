@@ -33,7 +33,7 @@ class CBaseEntity
     }
 
     // Method to get player's health
-    int getPlayerHealth()
+    float getPlayerHealth()
     {
         return m_health;
     }
@@ -47,6 +47,6 @@ int main()
 
     // std::cout << player.getPlayerName() << std::endl;
     // std::cout << player.getPlayerHealth() << std::endl;
-    
+
     return 0;
 }
