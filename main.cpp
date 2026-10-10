@@ -16,6 +16,12 @@ void mainMenuScreen()
     std::cout << "Choose an option: ";
 }
 
+void gamePlayScreen()
+{
+    std::cout << "The Witcher" << std::endl;
+    std::cout << "1. Inventory" << std::endl;
+    std::cout << "Choose an option: ";
+}
 
 class CBaseEntity
 {
@@ -54,28 +60,37 @@ int main()
 {
 
     mainMenuScreen();
-    int choice;
-    std::cin >> choice;
+    int menuOption;
+    std::cin >> menuOption;
 
-    if ( choice == 1)
+    if ( menuOption == 1 )
     {
-        std::cout << "You choiced: " << choice << ". Game is starting..." << std::endl;
+        std::cout << "You choiced: " << menuOption << ". Game is starting..." << std::endl;
         std::cout << "Let's start...\n Enter your future character's name, please: ";
         std::string playerName;
         std::cin >> playerName;
-        CBaseEntity Player(playerName, 100.0f, 0, 1, 0);
-        std::cout << "Thank you, " << Player.getPlayerName();
+        CBaseEntity Player(playerName, 100.0f, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
+        std::cout << "Thank you, " << Player.getPlayerName() << std::endl;
 
-        while(Player.getPlayerHealth() > 0)
+        while( Player.getPlayerHealth() > 0 )
         {
             // играем...
+            gamePlayScreen();
+            int choice;
+            std::cin >> choice;
+
+            if ( choice == 1)
+            {
+                std::cout << Player.getPlayerName() << "'s inventory:" << std::endl;
+                std::cout << "Gold: " << Player.m_gold << std::endl;
+            }
         }
 
     } else
     
-    if ( choice == 2)
+    if ( menuOption == 2 )
     {
-        std::cout << "You choiced: " << choice << ". Exiting..." << std::endl;
+        std::cout << "You choiced: " << menuOption << ". Exiting..." << std::endl;
     }
     
 
