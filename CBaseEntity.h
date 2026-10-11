@@ -20,4 +20,6 @@ class CBaseEntity
 
     // Method to get player's health
     float getPlayerHealth();
+
+    void showInventory();
 };

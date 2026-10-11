@@ -30,10 +30,13 @@ int main()
             int choice;
             std::cin >> choice;
 
-            if ( choice == 1)
+            if ( choice == 1 ) // show player's inventory
             {
-                std::cout << Player.getPlayerName() << "'s inventory:" << std::endl;
-                std::cout << "Gold: " << Player.m_gold << std::endl;
+                Player.showInventory();
+            } else
+            if ( choice == 2 ) // exit from game
+            {
+                break;
             }
         }
 

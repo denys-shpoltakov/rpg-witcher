@@ -14,5 +14,6 @@ void gamePlayScreen()
 {
     std::cout << "The Witcher" << std::endl;
     std::cout << "1. Inventory" << std::endl;
+    std::cout << "2. Exit game" << std::endl;
     std::cout << "Choose an option: ";
 }
