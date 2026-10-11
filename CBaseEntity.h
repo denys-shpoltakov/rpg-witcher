@@ -1,4 +1,4 @@
-#pragma once
+#pragma once // директива, чтобы компилятор не подключал файл дважды.
 
 #include <string>
 
