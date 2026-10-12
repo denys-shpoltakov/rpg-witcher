@@ -20,10 +20,10 @@ int main()
         std::cout << "Let's start...\n Enter your future character's name, please: ";
         std::string playerName;
         std::cin >> playerName;
-        CBaseEntity Player(playerName, 100.0f, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
-        std::cout << "Thank you, " << Player.getPlayerName() << std::endl;
+        CBaseEntity CPlayer(playerName, 100.0f, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
+        std::cout << "Thank you, " << CPlayer.getPlayerName() << std::endl;
 
-        while( Player.getPlayerHealth() > 0 )
+        while( CPlayer.getPlayerHealth() > 0 )
         {
             // играем...
             gamePlayScreen();
@@ -32,7 +32,7 @@ int main()
 
             if ( choice == 1 ) // show player's inventory
             {
-                Player.showInventory();
+                CPlayer.showInventory();
             } else
             if ( choice == 2 ) // exit from game
             {
