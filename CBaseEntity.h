@@ -4,16 +4,13 @@
 
 class CBaseEntity
 {
-  private:  
+  protected: // protected для того, чтобы наследники имели доступ к этим полям (m_name, m_health)
     std::string m_name;
     float m_health;
-  public:
-    int m_gold;
-    int m_level;
-    int m_exp;
 
+  public:
     // Constructor
-    CBaseEntity(std::string name, float health, int gold, int level, int exp);
+    CBaseEntity(std::string name, float health);
 
     // Method to get player's name
     std::string getPlayerName();
@@ -21,5 +18,6 @@ class CBaseEntity
     // Method to get player's health
     float getPlayerHealth();
 
-    void showInventory();
+    // Method to take damage
+    void takeDamage(float amount);
 };
