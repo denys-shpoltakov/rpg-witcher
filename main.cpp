@@ -37,6 +37,11 @@ int main()
             if ( choice == 2 ) // exit from game
             {
                 break;
+            } else
+            if ( choice == 3 ) // get an item
+            {
+                CItem Sword = {"Sword", "Just a sword, nothing more.", 15};
+                Player.addItem(Sword);
             }
         }
 
