@@ -23,7 +23,7 @@ int main()
         CPlayer Player(playerName, 100.0f, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
         std::cout << "Thank you, " << Player.getPlayerName() << std::endl;
 
-        while( Player.getPlayerHealth() > 0 )
+        while( Player.getPlayerHealth() >= 0 )
         {
             // играем...
             gamePlayScreen();
@@ -42,6 +42,11 @@ int main()
             {
                 CItem Sword = {"Sword", "Just a sword, nothing more.", 15};
                 Player.addItem(Sword);
+            } else
+            if ( choice == 4 )
+            {
+                Player.takeDamage(25);
+                std::cout << Player.getPlayerHealth() << std::endl;
             }
         }
 

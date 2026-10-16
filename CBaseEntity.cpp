@@ -20,3 +20,11 @@ float CBaseEntity::getPlayerHealth()  // :: <-- scope operator
 {
     return m_health;
 }
+
+// Method to get damage
+
+void CBaseEntity::takeDamage(int damage)
+{
+    m_health = m_health - damage;
+    std::cout << "You got " << damage << " damage!" << std::endl;
+}

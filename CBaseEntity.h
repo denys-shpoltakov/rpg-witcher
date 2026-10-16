@@ -19,5 +19,5 @@ class CBaseEntity
     float getPlayerHealth();
 
     // Method to take damage
-    void takeDamage(float amount);
+    void takeDamage(int damage);
 };
