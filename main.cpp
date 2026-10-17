@@ -7,6 +7,7 @@
 #include <vector>
 #include "UserInterface.h"
 #include "CPlayer.h"
+#include "CEnemy.h"
 
 int main()
 {
@@ -20,10 +21,10 @@ int main()
         std::cout << "Let's start...\n Enter your future character's name, please: ";
         std::string playerName;
         std::cin >> playerName;
-        CPlayer Player(playerName, 100.0f, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
-        std::cout << "Thank you, " << Player.getPlayerName() << std::endl;
+        CPlayer Player(playerName, 100.0f, 10, 0, 1, 0); // имя, здоровье, золото, уровень, опыт
+        std::cout << "Thank you, " << Player.getEntityName() << std::endl;
 
-        while( Player.getPlayerHealth() >= 0 )
+        while( Player.getPlayerHealth() > 0 )
         {
             // играем...
             gamePlayScreen();
@@ -45,8 +46,24 @@ int main()
             } else
             if ( choice == 4 )
             {
-                Player.takeDamage(25);
-                std::cout << Player.getPlayerHealth() << std::endl;
+                CEnemy enemy = {"Zombie", 100.0f, 5, 5};
+                while ( enemy.getPlayerHealth() > 0 )
+                {
+                    // fighting system
+                    std::cout << "type 1 to attack" << std::endl;
+                    std::cin >> choice; 
+                    
+                    if ( choice == 1 )
+                    {
+                        Player.attack(enemy);
+                        std::cout << enemy.getPlayerHealth() << std::endl;
+                        if ( enemy.getPlayerHealth() <= 0)
+                        {
+                            break;
+                            gamePlayScreen();
+                        }
+                    }
+                }
             }
         }
 

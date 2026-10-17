@@ -9,7 +9,7 @@
 #include "CEnemy.h"
 #include <iostream>
 
-CEnemy::CEnemy(std::string name, float health, int gold) : CBaseEntity(name, health), m_gold(gold)
+CEnemy::CEnemy(std::string name, float health, int damage, int gold) : CBaseEntity(name, health, damage), m_gold(gold)
 {
     // empty 
 }
