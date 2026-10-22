@@ -20,7 +20,7 @@ class CBaseEntity
     float getPlayerHealth();
 
     // Method to attack
-    void attack(CBaseEntity target);
+    void attack(CBaseEntity& target);
 
     // Method to take damage
     void takeDamage(int damage);

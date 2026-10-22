@@ -24,7 +24,7 @@ float CBaseEntity::getPlayerHealth()  // :: <-- scope operator
 
 // Method to attack
 
-void CBaseEntity::attack(CBaseEntity target)
+void CBaseEntity::attack(CBaseEntity& target)
 {
     target.takeDamage(m_damage);
 }
