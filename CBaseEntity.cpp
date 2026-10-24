@@ -3,36 +3,34 @@
 
 CBaseEntity::CBaseEntity(std::string name, float health, int damage)
 {
-    m_name     = name;
-    m_health   = health;
-    m_damage   = damage;
+    m_szName     = name;
+    m_flHealth   = health;
+    m_nDamage   = damage;
 }
 
-// Method to get player's name
+// Getters
 
-std::string CBaseEntity::getEntityName() // :: <-- scope operator
+std::string CBaseEntity::GetEntityName() // :: <-- scope operator
 {
-    return m_name;
+    return m_szName;
 }
 
-// Method to get player's health
-
-float CBaseEntity::getPlayerHealth()  // :: <-- scope operator
+float CBaseEntity::GetEntityHealth()  // :: <-- scope operator
 {
-    return m_health;
+    return m_flHealth;
 }
 
 // Method to attack
 
-void CBaseEntity::attack(CBaseEntity& target)
+void CBaseEntity::Attack(CBaseEntity& target)
 {
-    target.takeDamage(m_damage);
+    target.TakeDamage(m_nDamage);
 }
 
 // Method to get damage
 
-void CBaseEntity::takeDamage(int damage)
+void CBaseEntity::TakeDamage(int damage)
 {
-    m_health -= damage;
+    m_flHealth -= damage;
     std::cout << "You got " << damage << " damage!" << std::endl;
 }

@@ -19,25 +19,25 @@
 
 struct CItem // структура обычного предмета, не оружия, здесь нет урона итд.
 {
-  std::string m_name;
-  std::string m_info;
-  int m_cost;
+  std::string m_szName;
+  std::string m_szInfo;
+  int m_nCost;
 };
 
 
-class CPlayer : public CBaseEntity
+class CBasePlayer : public CBaseEntity
 {
   private:
-      int m_damage;
-      int m_gold;
-      int m_level;
-      int m_exp;
+      int m_nDamage;
+      int m_nGold;
+      int m_nLevel;
+      int m_nExp;
       std::vector<CItem> m_inventory; // <> <== teamplate, это то, что мы будем хранить в нашем векторе, в нашем случае, это
                                       // структура, в которой вся информация о предмете
   public:
-    CPlayer(std::string name, float health, int damage, int gold, int level, int exp);
+    CBasePlayer(std::string name, float health, int damage, int gold, int level, int exp);
 
-    void showInventory();
-    void addGold(int amount);
-    void addItem(CItem item);
+    void ShowInventory();
+    void AddGold(int amount);
+    void AddItem(CItem item);
 };

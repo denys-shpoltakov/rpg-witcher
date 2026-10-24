@@ -9,13 +9,13 @@
 #include "CBaseEntity.h"
 #include <iostream>
 
-class CEnemy : public CBaseEntity
+class CBaseEnemy : public CBaseEntity
 {
   private:
     // класс врага
-    int m_damage;
-    int m_gold;
+    int m_nDamage;
+    int m_nGold;
 
   public:
-    CEnemy(std::string name, float health, int damage, int gold);
+    CBaseEnemy(std::string name, float health, int damage, int gold);
 };
