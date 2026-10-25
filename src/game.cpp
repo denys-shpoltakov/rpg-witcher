@@ -55,7 +55,7 @@ int main()
                 {
                     // HACK: Hardcoded combat system. Watch down on FIXME
                     // FIXME: That's need to have own UI.
-                    std::cout << "type 1 to attack" << std::endl;
+                    fightingSystemScreen(); // <== now it has own UI
                     std::cin >> choice; 
                     
                     if ( choice == 1 ) // NOTE: player attacks an enemy
@@ -67,18 +67,24 @@ int main()
                             break;
                             // NOTE: just returning to actions menu ( gamePlayScreen() )
                         }
+                    } else
+                    if ( choice == 2 ) // NOTE: Player run from danger
+                    {
+                        std::cout << Player.GetEntityName() << " ran away" << std::endl;
+                        break; // NOTE: client leaving from this loop and going to goes to gamePlayScreen()
                     }
                 }
             }
-            // TODO: path system may be? You can walk around locations, meet enemies, loot some resources and find seller or buyer
-            // (dealer).
-            //             Pseudocode:
-            // ===================================
-            // if (choice == 5)
-            // {
-            //     // code...
-            // }
-            // ===================================
+            /* TODO: path system may be? You can walk around locations, meet enemies, loot some resources and find seller or buyer
+             (dealer).
+                           Pseudocode:
+               ===================================
+               if (choice == 5)
+               {
+                   // code...
+               }
+               ===================================
+            */ 
         }
 
     } else

@@ -7,6 +7,13 @@
 echo Compiling game...
 g++ .\src\CBaseEnemy.cpp .\src\CBaseEntity.cpp .\src\CBasePlayer.cpp .\src\game.cpp .\src\UserInterface.cpp -o game.exe
 
+:: Check if compilation was successful
+if %errorlevel% neq 0 (
+    echo Compilation FAILED! Fix your errors, soldier.
+    pause
+    exit /b %errorlevel%
+)
+
 color 2
 echo Compilation succesfull! Starting game.exe...
 echo ============================================

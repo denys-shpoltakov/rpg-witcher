@@ -32,5 +32,5 @@ void CBaseEntity::Attack(CBaseEntity& target)
 void CBaseEntity::TakeDamage(int damage)
 {
     m_flHealth -= damage;
-    std::cout << "You got " << damage << " damage!" << std::endl;
+    std::cout << m_szName << " got " << damage << " damage!" << std::endl;
 }

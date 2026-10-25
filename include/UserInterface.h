@@ -2,3 +2,4 @@
 
 void mainMenuScreen();
 void gamePlayScreen();
+void fightingSystemScreen();
