@@ -13,7 +13,7 @@ class CBaseEnemy : public CBaseEntity
 {
   private:
     // класс врага
-    int m_nDamage;
+    int m_iDamage;
     int m_nGold;
 
   public:

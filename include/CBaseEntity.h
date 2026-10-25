@@ -7,7 +7,7 @@ class CBaseEntity
   protected: // protected для того, чтобы наследники имели доступ к этим полям (m_name, m_health)
     std::string m_szName;
     float m_flHealth;
-    int m_nDamage;
+    int m_iDamage;
 
   public:
     // Constructor

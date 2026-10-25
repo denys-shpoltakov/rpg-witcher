@@ -21,17 +21,17 @@ struct CItem // структура обычного предмета, не ор�
 {
   std::string m_szName;
   std::string m_szInfo;
-  int m_nCost;
+  int m_iCost;
 };
 
 
 class CBasePlayer : public CBaseEntity
 {
   private:
-      int m_nDamage;
-      int m_nGold;
-      int m_nLevel;
-      int m_nExp;
+      int m_iDamage;
+      int m_iGold;
+      int m_iLevel;
+      int m_iExp;
       std::vector<CItem> m_inventory; // <> <== teamplate, это то, что мы будем хранить в нашем векторе, в нашем случае, это
                                       // структура, в которой вся информация о предмете
   public:

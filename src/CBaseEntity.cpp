@@ -1,11 +1,11 @@
-#include "CBaseEntity.h"
+#include "../include/CBaseEntity.h"
 #include <iostream>
 
 CBaseEntity::CBaseEntity(std::string name, float health, int damage)
 {
     m_szName     = name;
     m_flHealth   = health;
-    m_nDamage   = damage;
+    m_iDamage    = damage;
 }
 
 // Getters
@@ -24,7 +24,7 @@ float CBaseEntity::GetEntityHealth()  // :: <-- scope operator
 
 void CBaseEntity::Attack(CBaseEntity& target)
 {
-    target.TakeDamage(m_nDamage);
+    target.TakeDamage(m_iDamage);
 }
 
 // Method to get damage

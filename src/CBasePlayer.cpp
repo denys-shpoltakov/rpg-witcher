@@ -1,7 +1,7 @@
-#include "CBasePlayer.h"
+#include "../include/CBasePlayer.h"
 #include <iostream>
 
-CBasePlayer::CBasePlayer(std::string name, float health, int damage, int gold, int level, int exp) : CBaseEntity(name, health, damage), m_nGold(gold), m_nLevel(level), m_nExp(exp)
+CBasePlayer::CBasePlayer(std::string name, float health, int damage, int gold, int level, int exp) : CBaseEntity(name, health, damage), m_iGold(gold), m_iLevel(level), m_iExp(exp)
 {
     // empty
 }
@@ -9,9 +9,9 @@ CBasePlayer::CBasePlayer(std::string name, float health, int damage, int gold, i
 void CBasePlayer::ShowInventory()
 {
     std::cout << m_szName << "'s inventory:" << std::endl;
-    std::cout << "Gold: " << m_nGold << std::endl;
-    std::cout << "Level: " << m_nLevel << std::endl;
-    std::cout << "Exp: " << m_nExp << std::endl;
+    std::cout << "Gold: " << m_iGold << std::endl;
+    std::cout << "Level: " << m_iLevel << std::endl;
+    std::cout << "Exp: " << m_iExp << std::endl;
 
     if ( m_inventory.size() > 0 )
     {
@@ -19,7 +19,7 @@ void CBasePlayer::ShowInventory()
         {
             std::cout << "Slot " << i + 1 << ":" << std::endl;
             std::cout << "Item's name: " << m_inventory[i].m_szName << std::endl;
-            std::cout << "Item's cost: " << m_inventory[i].m_nCost << std::endl;
+            std::cout << "Item's cost: " << m_inventory[i].m_iCost << std::endl;
             std::cout << "Item's info: " << m_inventory[i].m_szInfo << std::endl;
         }
     }

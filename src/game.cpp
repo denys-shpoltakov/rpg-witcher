@@ -5,9 +5,9 @@
 // ==================================================
 
 #include <iostream>
-#include "UserInterface.h"
-#include "CBasePlayer.h"
-#include "CBaseEnemy.h"
+#include "../include/UserInterface.h"
+#include "../include/CBasePlayer.h"
+#include "../include/CBaseEnemy.h"
 
 int main()
 {
